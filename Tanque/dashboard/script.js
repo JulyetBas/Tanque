@@ -3,10 +3,10 @@ const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 
 let chart;
 
-// 🚀 ESPERAR A QUE CARGUE TODO EL HTML
+// ESPERAR A QUE CARGUE TODO EL HTML
 window.addEventListener("load", () => {
 
-  // 📊 GRAFICA
+  // GRAFICA
   const ctx = document.getElementById("grafica");
 
   chart = new Chart(ctx, {
