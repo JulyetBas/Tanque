@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Eater&display=swap" rel="stylesheet">
+    <link href="https://fonts.google.com/specimen/Tapestry?preview.script=Latn" rel="stylesheet">
   <title>Monitoreo tanque</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -9,12 +9,10 @@
 <body>
 
   <h1>Monitoreo - Tanque</h1>
-
+  <div id="rain"></div>
   <div class="grid">
 
 
-
-    
 
     <div class="card">
       <h2>Estado del tanque</h2>
@@ -36,20 +34,15 @@
       <p id="distancia">6 cm</p>
     </div>
 
-    <div class="card">
-      <h2>Duración ultrasonido</h2>
-      <p id="duracion">1200 us</p>
-    </div>
-
     <div class="card" id="graficaCard" style="max-width: 900px; margin: 20px auto; display:none;">
-        <h2>📊 Nivel del tanque</h2>
+        <h2>Grafica nivel del tanque</h2>
         <canvas id="grafica"></canvas>
       </div>
       
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   </div>
-
+  <img class="lobo" src="imagenes/lobo.png">
   <script src="script.js"></script>
 
 </body>

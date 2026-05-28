@@ -22,7 +22,7 @@ window.addEventListener("load", () => {
     }
   });
 
-  // 🎯 CLICK EN ESTADO
+  //  CLICK EN ESTADO
   document.getElementById("estado").addEventListener("click", () => {
     const card = document.getElementById("graficaCard");
 
@@ -33,7 +33,7 @@ window.addEventListener("load", () => {
     }
   });
 
-  // 🔁 LOOP DE DATOS
+  //  LOOP DE DATOS
   setInterval(obtenerDatos, 2000);
 });
 
@@ -60,7 +60,7 @@ async function obtenerDatos() {
     document.getElementById("porcentaje").innerText = d.porcentaje + "%";
     document.getElementById("lluvia").innerText = d.lluvia;
     document.getElementById("distancia").innerText = d.distancia + " cm";
-    document.getElementById("duracion").innerText = d.duracion + " us";
+    
 
     // COLOR
     const estadoCard = document.getElementById("estado").parentElement;
@@ -93,5 +93,47 @@ async function obtenerDatos() {
     }
 
     chart.update();
+
+
+    if (d.lluvia === "SI") {
+      rain.style.display = "block";
+    }
+    
+    else {
+      rain.style.display = "none";
+    }
+
+
+
+
+
+
   }
+
+
+
+
+
+
+
+}
+
+const rain = document.getElementById("rain");
+
+// crear gotas
+for (let i = 0; i < 100; i++) {
+
+  const drop = document.createElement("div");
+
+  drop.classList.add("drop");
+
+  drop.style.left = Math.random() * 100 + "vw";
+
+  drop.style.animationDuration =
+    0.5 + Math.random() * 1 + "s";
+
+  drop.style.animationDelay =
+    Math.random() * 2 + "s";
+
+  rain.appendChild(drop);
 }
